@@ -76,6 +76,8 @@ class WifiCracker:
             
         except FileNotFoundError:
             print("\nFatal Error: 'dictionary.txt' file not found in script directory.") # The dictionary file name should be an f-string and display name of actual .txt file.
-        except Exception as e:
+        except Exception as e:  # noqa: F841
             print("\nError: Could not connect to network.") # This should link to the GUI somehow.
-            
+
+if __name__ == "__main__":
+    WifiCracker.crack_dictionary_attack()
