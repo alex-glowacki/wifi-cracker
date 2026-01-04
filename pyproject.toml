@@ -1,0 +1,21 @@
+[project]
+name = "wifi-cracker"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "comtypes==1.4.14",
+    "PyQt6==6.10.1",
+    "PyQt6-Qt6==6.10.1",
+    "PyQt6_sip==13.10.3",
+    "pywifi==1.1.12",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

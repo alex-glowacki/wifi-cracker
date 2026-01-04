@@ -7,7 +7,6 @@ import sys
 from PyQt6.QtWidgets import QApplication
 
 # Local application
-#from .ui.main_window import MainWindow
 from ui.main_window import MainWindow
 
 
