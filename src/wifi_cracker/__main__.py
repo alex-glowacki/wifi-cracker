@@ -1,7 +1,7 @@
 # src/wifi_cracker/__main__.py
 
 # Local application
-from app import main
+from wifi_cracker.app import main
 
 
 if __name__ == "__main__":

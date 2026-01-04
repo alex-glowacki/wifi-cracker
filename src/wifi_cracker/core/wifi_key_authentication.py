@@ -1,4 +1,4 @@
-# src/wifi_cracker/core/cracker.py
+# src/wifi_cracker/core/wifi_key_authentication.py
 
 # Standard library
 import os
@@ -16,7 +16,8 @@ class WifiCracker:
         # Input for command line - TESTING ONLY.
         try:
             ssid = input("Enter WiFi SSID (name): ") # This should link to input from GUI after testing.
-            var_time = int(input("Enter cycle time (seconds): ")) # This should link to input from GUI after testing.
+            #var_time = int(input("Enter cycle time (seconds): ")) # This should link to input from GUI after testing.
+            var_time = 0.1 # For testing purposes only.
         except ValueError:
             print("Error: Cycle time must be an integer.") # This should link to a dialog window.
             sys.exit(1) # Look into this after testing is finished.
@@ -47,7 +48,7 @@ class WifiCracker:
                     password = line.strip()
                     
                     # Shows the password that is currently being tested
-                    print(f"Testing: {password.ljust(20)}", end="\r") # This should link to a dialog window.
+                    print(f"Testing: {password.ljust(30)}", end="\r") # This should link to a dialog window.
                     
                     profile = pywifi.Profile()
                     profile.ssid = ssid
