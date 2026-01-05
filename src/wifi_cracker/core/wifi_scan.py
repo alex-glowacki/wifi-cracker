@@ -7,7 +7,7 @@ import re
 from typing import List
 
 
-def _run(cmd: list[str]) -> str:
+def _run(cmd: List[str]) -> str:
     return subprocess.check_output(cmd, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="ignore")
 
 def scan_ssids() -> List[str]:
@@ -59,3 +59,11 @@ def scan_ssids() -> List[str]:
             ssids = re.findall(r'ESSID:"(.*?)"', out)
             ssids = [s for s in ssids if s]
             return sorted(set(ssids), key=str.lower)
+
+
+def main() -> List[str]: # For testing purposes only.
+    print(scan_ssids())
+        
+
+if __name__ == "__main__":
+    main()

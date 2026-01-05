@@ -12,10 +12,11 @@ from pywifi import const
 
 # classes
 class WifiCracker:
-    def crack_dictionary_attack():
+    def crack_dictionary_attack(self, ssid_text, text_file_path):
         # Input for command line - TESTING ONLY.
         try:
-            ssid = input("Enter WiFi SSID (name): ") # This should link to input from GUI after testing.
+            ssid = ssid_text
+            #ssid = input("Enter WiFi SSID (name): ") # This should link to input from GUI after testing.
             #var_time = int(input("Enter cycle time (seconds): ")) # This should link to input from GUI after testing.
             var_time = 0.1 # For testing purposes only.
         except ValueError:
@@ -28,8 +29,9 @@ class WifiCracker:
             
         # WiFi cracking logic
         try:
-            script_dir = os.path.dirname(os.path.abspath(__file__))
-            dictionary_path = os.path.join(script_dir, "dictionary.txt") # This should be a window to browse and select custom dictionary path if wanted - AFTER TESTING.
+            #script_dir = os.path.dirname(os.path.abspath(__file__))
+            #dictionary_path = os.path.join(script_dir, "dictionary.txt") # This should be a window to browse and select custom dictionary path if wanted - AFTER TESTING.
+            dictionary_path = text_file_path
             
             with open(dictionary_path, "r", errors="ignore") as file:
                 
@@ -81,4 +83,4 @@ class WifiCracker:
             print("\nError: Could not connect to network.") # This should link to the GUI somehow.
 
 if __name__ == "__main__":
-    WifiCracker.crack_dictionary_attack()
+    WifiCracker.crack_dictionary_attack(ssid_text=str, text_file_path=str)
