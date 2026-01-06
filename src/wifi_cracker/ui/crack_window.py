@@ -2,13 +2,13 @@
 
 # Third-party
 from PyQt6.QtWidgets import (
-    QApplication,
     QVBoxLayout,
     QWidget,
-    QLabel,
+    QPlainTextEdit,
 )
-
-# Local application
+from PyQt6.QtCore import (
+    pyqtSlot,
+)
 
 
 # Classes
@@ -18,6 +18,13 @@ class CrackWindow(QWidget):
         self.setWindowTitle("WiFi Dictionary Attack")
         self.resize(500, 500)
         
-        layout = QVBoxLayout()
-        
-        self.setLayout(layout)
+        layout = QVBoxLayout(self)
+        self.log = QPlainTextEdit()
+        self.log.setReadOnly(True)
+        layout.addWidget(self.log)
+    
+    
+    @pyqtSlot(str)
+    def append_text(self, text: str):
+        self.log.insertPlainText(text)
+        self.log.ensureCursorVisible()
