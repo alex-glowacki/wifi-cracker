@@ -21,7 +21,7 @@ from wifi_cracker.ui.constants import (
 
 # Classes
 class ScanWindow(QWidget):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         
         self.setWindowTitle(SCAN_WINDOW_TITLE)
@@ -45,6 +45,6 @@ class ScanWindow(QWidget):
         self.setLayout(layout)
         
     
-    def _update_scan_results(self):
+    def _update_scan_results(self) -> None:
         ssids = WifiScan.scan_ssids()
         self.scan_results.setText("\n".join(ssids))
