@@ -1,0 +1,38 @@
+/* Base */
+QWidget {
+    font-size: 12pt;
+}
+
+/* Main window */
+QMainWindow, QWidget {
+    background: #1e1e1e;
+    color: #eaeaea;
+}
+
+/* QPushButton */
+QPushButton {
+    background: #2d2d2d;
+    border: 1px solid #444:
+    border-radius: 8px;
+    padding: 8px 12px
+}
+QPushButton: hover {
+    background: #3a3a3a;
+}
+QPushButton: pressed {
+    background: #242424;
+}
+
+/* Inputs */
+QLineEdit, QPlainTextEdit, QTextEdit {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 6px;
+    selection-background-color: #264f78
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    width: 12px;
+}
