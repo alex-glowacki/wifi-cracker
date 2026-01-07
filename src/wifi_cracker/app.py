@@ -12,11 +12,7 @@ from wifi_cracker.ui.main_window import MainWindow
 
 # Entry point function
 def main() -> int:
-    """
-    Application startup logic.
-    Creates the QApplication and main window.
-    """
-    app = QApplication(sys.argv)
+    app = QApplication.instance() or QApplication(sys.argv)
     
     window = MainWindow()
     window.show()
