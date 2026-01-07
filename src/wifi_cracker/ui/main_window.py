@@ -71,13 +71,22 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.ssid_text, 1, 1)
         
         # Buttons
-        self.password_dictionary_btn = Btn.var_btn("Browse")
-        self.scan_btn = Btn.var_btn("Scan")
-        self.attack_btn = Btn.var_btn("Start Attack")
+        self.password_dictionary_btn = Btn.var_btn("BROWSE")
+        self.scan_btn = Btn.var_btn("SCAN")
+        self.attack_btn = Btn.var_btn("START ATTACK")
         
         self.password_dictionary_btn.clicked.connect(self.open_file_dialog)
         self.scan_btn.clicked.connect(self._show_scan_window)
         self.attack_btn.clicked.connect(self.start_job)
+        
+        # QSS style sheet coding.
+        self.password_dictionary_btn.setObjectName("dictionaryButton")
+        self.scan_btn.setObjectName("scanButton")
+        self.attack_btn.setObjectName("attackButton")
+        
+        #self.password_dictionary_btn.setProperty("variant", "primary")
+        #self.scan_btn.setProperty("variant", "primary")
+        #self.attack_btn.setProperty("variant", "primary")
         
         layout.addWidget(self.password_dictionary_btn, 0, 2)
         layout.addWidget(self.scan_btn, 1, 2)

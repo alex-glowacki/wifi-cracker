@@ -1,38 +1,72 @@
-/* Base */
-QWidget {
-    font-size: 12pt;
-}
 
-/* Main window */
 QMainWindow, QWidget {
-    background: #1e1e1e;
-    color: #eaeaea;
+    background-color: #2d2d2d;
+    /*color: #eaeaea;*/
+    font-family: "Segoe UI";
 }
 
-/* QPushButton */
-QPushButton {
-    background: #2d2d2d;
-    border: 1px solid #444:
-    border-radius: 8px;
-    padding: 8px 12px
-}
-QPushButton: hover {
-    background: #3a3a3a;
-}
-QPushButton: pressed {
-    background: #242424;
+
+QPushButton#dictionaryButton {
+    /*font-size: 20px;*/
+    background-color: #ff059bff;
+    color: #2d2d2d;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 5px;
 }
 
-/* Inputs */
-QLineEdit, QPlainTextEdit, QTextEdit {
-    background: #121212;
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 6px;
-    selection-background-color: #264f78
+QPushButton#scanButton {
+    /*font-size: 12px;*/
+    background-color: #ff059bff;
+    color: #2d2d2d;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 5px;
 }
 
-/* Scrollbars */
-QScrollBar:vertical {
-    width: 12px;
+QPushButton#attackButton {
+    /*font-size: 12px;*/
+    background-color: #ff059bff;
+    color: #2d2d2d;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+
+QPushButton#dictionaryButton:hover {
+    background-color: #ff0277c5;
+    color: #333333;
+}
+
+QPushButton#scanButton:hover {
+    background-color: #ff0085dd;
+    color: #333333;
+}
+
+QPushButton#attackButton:hover {
+    background-color: #ff0085dd;
+    color: #333333;
+}
+
+
+QPushButton#dictionaryButton:pressed {
+    background-color: #2d2d2d;
+    color: #ff059bff;
+    border: 1px solid #ff059bff;
+}
+
+QPushButton#scanButton:pressed {
+    background-color: #2d2d2d;
+    color: #ff059bff;
+    border: 1px solid #ff059bff;
+}
+
+QPushButton#attackButton:pressed {
+    background-color: #2d2d2d;
+    color: #ff059bff;
+    border: 1px solid #ff059bff;
 }
